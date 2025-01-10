@@ -5,20 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800">
- <header class="p-4 bg-red-500 text-yellow-100 text-center animate-bounce">
-  <h1 class="text-5xl font-extrabold">Мой удивительный сайт!</h1>
-  </header>
-
-  <head>
   <style>
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 16px;
       padding: 16px;
-      background-color: #f8f9fa; /* Цвет фона */
+      background-color: #f8f9fa;
     }
 
     .card {
@@ -30,7 +23,7 @@
     }
 
     .card:hover {
-      transform: translateY(-5px); /* Поднимаем карточку при наведении */
+      transform: translateY(-5px);
     }
 
     .card-image {
@@ -45,112 +38,72 @@
       font-weight: bold;
       text-align: center;
     }
+
+    .aspect-w-16 {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+    }
+
+    .aspect-w-16 iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="p-4 bg-red-500 text-yellow-100 text-center animate-bounce">
+    <h1 class="text-5xl font-extrabold">Мой удивительный сайт!</h1>
+  </header>
 
   <main class="p-6">
+    <!-- About Section -->
     <section class="mb-4">
       <h2 class="text-2xl font-semibold">About Me</h2>
       <p class="mt-2">Hello! This is my first website. I'm excited to learn more about web development!</p>
     </section>
 
-    <section class="mt-6">
-      <h2 class="text-2xl font-semibold">Полезные ссылки</h2>
-      <ul class="mt-2 list-disc pl-6">
-        <li><a href="https://github.com" target="_blank" class="text-blue-500 hover:underline">Перейти на GitHub</a></li>
-        <li><a href="https://google.com" target="_blank" class="text-blue-500 hover:underline">Перейти на Google</a></li>
-      </ul>
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="card">
+        <img src="images/DSC_0011.JPG" alt="Фото 1" class="card-image">
+        <p class="card-title">Фото 1</p>
+      </div>
+      <div class="card">
+        <img src="images/DSC_0146.JPG" alt="Фото 2" class="card-image">
+        <p class="card-title">Фото 2</p>
+      </div>
+      <div class="card">
+        <img src="images/DSC_0404.jpg" alt="Фото 3" class="card-image">
+        <p class="card-title">Фото 3</p>
+      </div>
+      <div class="card">
+        <img src="images/DSC_0009.JPG" alt="Фото 4" class="card-image">
+        <p class="card-title">Фото 4</p>
+      </div>
+      <div class="card">
+        <img src="images/DSC_0006.JPG" alt="Фото 5" class="card-image">
+        <p class="card-title">Фото 5</p>
+      </div>
     </section>
 
-<section class="gallery">
-  <div class="card">
-    <img src="images/DSC_0011.JPG" alt="Фото 1" class="card-image">
-    <p class="card-title">Фото 1</p>
-  </div>
-  <div class="card">
-    <img src="images/DSC_0146.JPG" alt="Фото 2" class="card-image">
-    <p class="card-title">Фото 2</p>
-  </div>
-  <div class="card">
-    <img src="images/DSC_0404.jpg" alt="Фото 3" class="card-image">
-    <p class="card-title">Фото 3</p>
-  </div>
-  <div class="card">
-    <img src="images/DSC_0009.JPG" alt="Фото 4" class="card-image">
-    <p class="card-title">Фото 4</p>
-    <div class="card">
-    <img src="images/DSC_0006.JPG" alt="Фото 4" class="card-image">
-    <p class="card-title">Фото 5</p>
-  </div>
-</section>
+    <!-- Blog Section -->
+    <section class="mt-6">
+      <h2 class="text-2xl font-semibold">Блог</h2>
+      <article class="mt-4 border-b border-gray-300 pb-4 blog-article">
+        <h3 class="text-xl font-bold">Первая запись</h3>
+        <p class="text-sm text-gray-500">Опубликовано: 08 января 2025</p>
+        <p class="mt-2">Это пример записи в блоге. Просто файл в формате HTML? Перетащенный в blog/.</p>
+        <a href="/MyFirstSite/blog/gdd.html" class="text-blue-500 hover:underline">Здесь я тренируюсь...</a>
+      </article>
+    </section>
+  </main>
 
-</section>
-
-
- <section class="mt-6">
-  <h2 class="text-2xl font-semibold">Видео</h2>
-  <div class="mt-4 aspect-w-16 aspect-h-9">
-    <iframe 
-      src="https://www.youtube.com/embed/5Cd5-S4zUBk" 
-      title="YouTube video player" 
-      class="w-full h-full rounded shadow-lg"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<style>
-  .aspect-w-16 {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* (9/16)*100 */
-  }
-  .aspect-w-16 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
-     
-<section class="mt-6">
-  <h2 class="text-2xl font-semibold">Блог</h2>
-
-  <!-- Первая запись -->
-  <article class="mt-4 border-b border-gray-300 pb-4">
-    <h3 class="text-xl font-bold">Первая запись</h3>
-    <p class="text-sm text-gray-500">Опубликовано: 08 января 2025</p>
-    <p class="mt-2">Это пример записи в блоге. Просто файл в форм html? перетащенный в blog/</p>
-<a href="/MyFirstSite/blog/gdd.html" class="text-blue-500 hover:underline">Здесь я тренируюсь...</a>
-  </article>
-
-  <!-- Вторая запись -->
-  <article class="mt-4 border-b border-gray-300 pb-4">
-    <h3 class="text-xl font-bold">Вторая запись</h3>
-    <p class="text-sm text-gray-500">Опубликовано: 09 января 2025</p>
-    <p class="mt-2">Вот еще одна запись с новыми идеями. Подключайте ссылки или картинки для полноты!</p>
-    <a href="#" class="text-blue-500 hover:underline">Читать далее...</a>
-  </article>
-
-  <!-- Третья запись -->
-  <article class="mt-4 border-b border-gray-300 pb-4">
-    <h3 class="text-xl font-bold">Третья запись</h3>
-    <p class="text-sm text-gray-500">Опубликовано: 10 января 2025</p>
-    <p class="mt-2">Добавьте сюда ваш текст или ссылки на внешние ресурсы.</p>
-    <a href="#" class="text-blue-500 hover:underline">Читать далее...</a>
-  </article>
-
-</section>
-
-  
-</section>
   <footer class="p-4 bg-gray-800 text-white text-center">
     <p>© 2025 My First Website</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
